@@ -8,3 +8,6 @@ Image credits:
 
 1) RitaE: https://pixabay.com/users/ritae-19628/
 https://pixabay.com/photos/pancakes-yummy-dessert-4410606/
+
+2) webandi: https://pixabay.com/users/webandi-1460261/
+https://pixabay.com/photos/pancakes-salmon-quark-pancake-rolls-2886046/

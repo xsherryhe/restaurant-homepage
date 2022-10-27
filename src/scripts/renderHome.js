@@ -12,9 +12,10 @@ function renderHeadings() {
 }
 
 function renderCrepeMainImage() {
-  renderImage(contentElement, require.context('../images/crepe-main/', false, /\.jpg$/i), 
-           '60vw', 
-           'Crepe topped with blueberries with small bowl of jam');
+  renderImage(contentElement, 
+              require.context('../images/crepe-main/', false, /\.jpg$/i), 
+              '60vw', 
+              'Crepe topped with blueberries with small bowl of jam');
 }
 
 function renderReviews() {
