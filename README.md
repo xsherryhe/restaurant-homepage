@@ -3,3 +3,8 @@ This project is a sample homepage for a restaurant. It is built using the standa
 The project primarily demonstrates use of npm to incorporate external JS modules, as well as use of Webpack to bundle files and add a build phase to front-end web projects.
 
 This project is currently in progress.
+
+Image credits:
+
+1) RitaE: https://pixabay.com/users/ritae-19628/
+https://pixabay.com/photos/pancakes-yummy-dessert-4410606/
