@@ -1,4 +1,4 @@
-export default function addImage(parentElement, imgDistSet, sizes, alt = '') {
+export default function renderImage(parentElement, imgDistSet, sizes, alt = '') {
   const img = new Image(),
     imgSrcSet =
       imgDistSet.keys()

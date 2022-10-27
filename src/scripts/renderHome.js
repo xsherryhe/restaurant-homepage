@@ -1,8 +1,8 @@
-import addImage from './addImage';
+import renderContentNone from './renderNone';
+import renderImage from './renderImage';
+import { contentElement } from './selectFromDOM';
 
-const contentElement = document.getElementById('content');
-
-function addHeadings() {
+function renderHeadings() {
   const nameElement = document.createElement('h1'),
         bylineElement = document.createElement('h2');
   
@@ -11,13 +11,13 @@ function addHeadings() {
   [nameElement, bylineElement].forEach(element => contentElement.appendChild(element));
 }
 
-function addCrepeMainImage() {
-  addImage(contentElement, require.context('../images/crepe-main/', false, /\.jpg$/i), 
+function renderCrepeMainImage() {
+  renderImage(contentElement, require.context('../images/crepe-main/', false, /\.jpg$/i), 
            '60vw', 
            'Crepe topped with blueberries with small bowl of jam');
 }
 
-function addReviews() {
+function renderReviews() {
   const reviewElement = document.createElement('div'),
         reviewContentElement = document.createElement('p'),
         reviewAuthorElement = document.createElement('p');
@@ -34,7 +34,7 @@ function addReviews() {
   contentElement.appendChild(reviewElement);
 }
 
-function addHours() {
+function renderHours() {
   const hoursElement = document.createElement('table');
   hoursElement.classList.add('hours');
   hoursElement.innerHTML = `
@@ -78,9 +78,10 @@ function addHours() {
   contentElement.appendChild(hoursElement);
 }
 
-export default function initialize() {
-  addHeadings();
-  addCrepeMainImage();
-  addReviews();
-  addHours();
+export default function renderHome() {
+  renderContentNone();
+  renderHeadings();
+  renderCrepeMainImage();
+  renderReviews();
+  renderHours();
 }

@@ -1,3 +1,6 @@
-import initialize from './initial';
+import bindEvents from './bindEvents';
+import renderInitial from './renderInitial';
+import renderHome from './renderHome';
 
-initialize();
+renderInitial();
+bindEvents();
