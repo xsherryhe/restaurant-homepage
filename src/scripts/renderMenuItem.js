@@ -1,4 +1,4 @@
-import renderImage from './renderImage';
+import renderResponsiveImage from './renderImage';
 
 export default function renderMenuItem(parentElement, name, description, 
                                        imgDistSet, imgAlt) {
@@ -23,7 +23,7 @@ export default function renderMenuItem(parentElement, name, description,
   }
 
   function renderMenuItemImage() {
-    renderImage(menuItemContainer, imgDistSet, '40vw', imgAlt);
+    renderResponsiveImage(menuItemContainer, imgDistSet, '40vw', imgAlt);
   }
 
   function render() {

@@ -54,3 +54,6 @@ https://pixabay.com/photos/smoothies-fruit-drink-food-2253423/
 
 16) fernandovillalobos: https://pixabay.com/users/fernandovillalobos-1265786/
 https://pixabay.com/photos/tea-cold-ice-2220485/
+
+17) Tirachard Kumtanom: https://www.pexels.com/@tirachard-kumtanom-112571/
+https://www.pexels.com/photo/two-sets-of-brown-wooden-table-and-chairs-outside-store-601169/

@@ -1,5 +1,5 @@
 import renderContentNone from './renderNone';
-import renderImage from './renderImage';
+import renderResponsiveImage from './renderImage';
 import { contentElement } from './selectFromDOM';
 
 function renderHeadings() {
@@ -12,7 +12,7 @@ function renderHeadings() {
 }
 
 function renderCrepeMainImage() {
-  renderImage(contentElement, 
+  renderResponsiveImage(contentElement, 
               require.context('../images/crepe-main/', false, /\.jpg$/i), 
               '60vw', 
               'Crepe topped with blueberries with small bowl of jam');

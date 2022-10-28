@@ -1,4 +1,14 @@
-export default function renderImage(parentElement, imgDistSet, sizes, alt = '') {
+const distIcons = require.context('../images/icons/', false, /\.svg$/i),
+      srcIcons = distIcons.keys();
+
+export function renderIcon(parentElement, iconName) {
+  const img = new Image();
+  img.classList.add('icon');
+  img.src = distIcons(srcIcons.find(filename => filename.includes(iconName)));
+  parentElement.appendChild(img);
+}
+
+export default function renderResponsiveImage(parentElement, imgDistSet, sizes, alt = '') {
   const img = new Image(),
     imgSrcSet =
       imgDistSet.keys()
