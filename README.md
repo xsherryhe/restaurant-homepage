@@ -39,6 +39,7 @@ https://pixabay.com/photos/crepe-banana-chocolate-eat-cute-2856552/
 
 11) Pexels: https://pixabay.com/users/pexels-2286921/
 https://pixabay.com/photos/bowl-french-fries-food-fries-1842294/
+https://pixabay.com/photos/clouds-sky-bright-daylight-light-1282314/
 
 12) bhumann34: https://pixabay.com/users/bhumann34-967924/
 https://pixabay.com/photos/food-spinach-artichoke-1179397/
@@ -57,3 +58,6 @@ https://pixabay.com/photos/tea-cold-ice-2220485/
 
 17) Tirachard Kumtanom: https://www.pexels.com/@tirachard-kumtanom-112571/
 https://www.pexels.com/photo/two-sets-of-brown-wooden-table-and-chairs-outside-store-601169/
+
+18) Freepik: https://www.flaticon.com/
+https://www.flaticon.com/free-icon/sun_2698213

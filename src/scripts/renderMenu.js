@@ -1,6 +1,11 @@
 import renderContentNone from './renderNone';
 import renderMenuItem from './renderMenuItem';
-import { contentElement } from './selectFromDOM';
+import { contentElement } from './cacheDOM';
+
+function setStyleClasses() {
+  document.body.classList.add('menu');
+  document.querySelector('.tab.menu').classList.add('current');
+}
 
 function renderMainHeading() {
   const menuHeadingElement = document.createElement('h1');
@@ -78,6 +83,7 @@ function renderSection(headingText, details) {
 
 export default function renderMenu() {
   renderContentNone();
+  setStyleClasses();
   renderMainHeading();
   renderAppetizers();
   renderSavoryCrepes();

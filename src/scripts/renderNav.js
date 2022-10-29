@@ -1,4 +1,4 @@
-import { contentElement } from './selectFromDOM';
+import { contentElement } from './cacheDOM';
 
 function renderNavTabs() {
   const navTabsElement = document.createElement('nav');

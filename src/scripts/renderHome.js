@@ -1,24 +1,54 @@
 import renderContentNone from './renderNone';
 import renderResponsiveImage from './renderImage';
-import { contentElement } from './selectFromDOM';
+import { contentElement } from './cacheDOM';
+
+function setStyleClasses() {
+  document.body.classList.add('home');
+  document.querySelector('.tab.home').classList.add('current');
+}
 
 function renderHeadings() {
-  const nameElement = document.createElement('h1'),
+  const headingsElement = document.createElement('div'),
+        nameElement = document.createElement('h1'),
         bylineElement = document.createElement('h2');
   
+  headingsElement.classList.add('home-headings');
+  renderResponsiveImage(headingsElement, 
+                        require.context('../images/logo/', false, /\.png$/i),
+                        '8rem');
   nameElement.textContent = 'Crepes on a Cloud';
   bylineElement.textContent = 'Eatery for Sweet and Savory Crepes';
-  [nameElement, bylineElement].forEach(element => contentElement.appendChild(element));
+  [nameElement, bylineElement].forEach(element => headingsElement.appendChild(element));
+  contentElement.appendChild(headingsElement);
 }
 
 function renderCrepeMainImage() {
   renderResponsiveImage(contentElement, 
               require.context('../images/crepe-main/', false, /\.jpg$/i), 
-              '60vw', 
+              '100vw', 
               'Crepe topped with blueberries with small bowl of jam');
 }
 
-function renderReviews() {
+function renderAttribution() {
+  const attributionContainer = document.createElement('div'),
+        attributionElement = document.createElement('div');
+  attributionContainer.classList.add('attribution-container');
+  attributionElement.classList.add('attribution');
+  attributionElement.innerHTML =
+    `<a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>`
+  attributionContainer.appendChild(attributionElement);
+  contentElement.appendChild(attributionContainer);
+}
+
+function renderInfo() {
+  const infoElement = document.createElement('div');
+  infoElement.classList.add('info');
+  renderHours(infoElement);
+  renderReviews(infoElement);
+  contentElement.appendChild(infoElement);
+}
+
+function renderReviews(parentElement) {
   const reviewElement = document.createElement('div'),
         reviewContentElement = document.createElement('p'),
         reviewAuthorElement = document.createElement('p');
@@ -32,10 +62,10 @@ function renderReviews() {
   reviewAuthorElement.classList.add('review-author');
   reviewAuthorElement.textContent = 'Madeline from France';
   [reviewContentElement, reviewAuthorElement].forEach(element => reviewElement.appendChild(element));
-  contentElement.appendChild(reviewElement);
+  parentElement.appendChild(reviewElement);
 }
 
-function renderHours() {
+function renderHours(parentElement) {
   const hoursElement = document.createElement('table');
   hoursElement.classList.add('hours');
   hoursElement.innerHTML = `
@@ -76,13 +106,14 @@ function renderHours() {
     </tbody>
   `;
 
-  contentElement.appendChild(hoursElement);
+  parentElement.appendChild(hoursElement);
 }
 
 export default function renderHome() {
   renderContentNone();
+  setStyleClasses();
   renderHeadings();
   renderCrepeMainImage();
-  renderReviews();
-  renderHours();
+  renderAttribution();
+  renderInfo();
 }

@@ -1,6 +1,11 @@
 import renderContentNone from './renderNone';
 import renderResponsiveImage, { renderIcon } from './renderImage';
-import { contentElement } from './selectFromDOM';
+import { contentElement } from './cacheDOM';
+
+function setStyleClasses() {
+  document.body.classList.add('contact');
+  document.querySelector('.tab.contact').classList.add('current');
+}
 
 function renderRestaurantImage() {
   renderResponsiveImage(contentElement, 
@@ -51,6 +56,7 @@ function renderContactDetail(type, content) {
 
 export default function renderContact() {
   renderContentNone();
+  setStyleClasses();
   renderRestaurantImage();
   renderVisitUs();
   renderContactUs();
