@@ -16,6 +16,7 @@ body.contact #content {
 }
 
 .contact-content > img {
+  object-fit: cover;
   max-height: 50vh;
   align-self: center;
   border-radius: 0.25rem;
@@ -26,6 +27,7 @@ body.contact #content {
 .contact-details {
   display: flex;
   justify-content: space-around;
+  padding: 0.25rem 0 0.5rem;
 }
 
 .contact-detail {
@@ -38,4 +40,50 @@ body.contact #content {
 
 .contact-detail img {
   max-width: 1.5rem;
+}
+
+.contact-detail p {
+  margin: 0;
+}
+
+@media (max-width: 815px) {
+  .contact-content {
+    padding: 0 0.5rem;
+  }
+
+  .contact-detail {
+    font-size: 1rem;
+    grid-template: 1fr / 1rem 1fr;
+  }
+
+  .contact-detail img {
+    max-width: 1rem;
+  }
+}
+
+@media (max-width: 725px) {
+  .contact-details {
+    justify-content: space-between;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-content>img {
+    min-width: 100vw;
+    max-height: 35vh;
+  }
+
+  .contact-details {
+    justify-content: space-between;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
 }

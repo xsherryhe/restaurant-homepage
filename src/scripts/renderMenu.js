@@ -34,7 +34,7 @@ function renderAppetizers() {
 
 function renderSavoryCrepes() {
   const savoryCrepesDetails =
-    [['Classic Ham and Turkey Crepe', 'Ham, turkey, mushrooms, cheddar cheese, bell peppers, and melted butter',
+    [['Classic Ham and Turkey Crepe', 'Ham, turkey, mushrooms, cheddar cheese, bell peppers, and melted butter.',
       require.context('../images/classic-crepe', false, /\.jpg$/i), 'Two wrapped crepes drizzled with butter sauce'],
     ['Southwestern Crepe', 'Corn, tomatoes, black beans, bell peppers, sausage, and guacamole.',
       require.context('../images/southwestern-crepe', false, /\.jpg$/i), 'Crepe topped with avocado, tomatoes, and corn'],
