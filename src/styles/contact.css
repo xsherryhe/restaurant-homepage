@@ -1,0 +1,41 @@
+body.contact #content {
+  background-color: white;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+.heading.contact {
+  border-bottom: none;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.contact-content > img {
+  max-height: 50vh;
+  align-self: center;
+  border-radius: 0.25rem;
+  border: 4px solid var(--secondary-color);
+  outline: 4px double var(--tertiary-color);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-detail {
+  display: grid;
+  grid-template: 1fr / 1.5rem max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.contact-detail img {
+  max-width: 1.5rem;
+}

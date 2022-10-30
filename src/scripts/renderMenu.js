@@ -9,15 +9,15 @@ function setStyleClasses() {
 }
 
 function renderHeading() {
-  const headingContainer = document.createElement('div'),
-        headingElement = document.createElement('h1');
-  headingContainer.classList.add('menu', 'heading');
-  renderResponsiveImage(headingContainer,
+  const headingElement = document.createElement('div'),
+        headingTextElement = document.createElement('h1');
+  headingElement.classList.add('menu', 'heading');
+  renderResponsiveImage(headingElement,
                         require.context('../images/logo/', false, /\.png$/i),
                         '8rem');
-  headingElement.textContent = 'Menu';
-  headingContainer.appendChild(headingElement);
-  contentElement.appendChild(headingContainer);
+  headingTextElement.textContent = 'Menu';
+  headingElement.appendChild(headingTextElement);
+  contentElement.appendChild(headingElement);
 }
 
 function renderAppetizers() {

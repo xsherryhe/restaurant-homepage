@@ -28,8 +28,7 @@ html {
 }
 
 body {
-  background: repeating-linear-gradient(#fbf9f5, transparent 200px, transparent 1000px, #fbf9f5 1277px),
-              url(../images/clouds/clouds.jpg);
+  background-image: url(../images/clouds/clouds.jpg);
   font-family: var(--site-font);
   color: var(--font-color);
   margin: 0;
