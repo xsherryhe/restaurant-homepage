@@ -10,6 +10,10 @@ body.home {
   font-size: 1.6rem;
 }
 
+.crepe-main-img {
+  width: 100vw;
+}
+
 .attribution-container {
   position: relative;
 }
@@ -180,7 +184,7 @@ body.home {
 
 @media (max-width: 450px) {
   .home.heading h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .hours table {

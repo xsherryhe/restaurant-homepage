@@ -15,7 +15,7 @@ function renderHeadings() {
   headingsElement.classList.add('home', 'heading');
   renderResponsiveImage(headingsElement, 
                         require.context('../images/logo/', false, /\.png$/i),
-                        '8rem');
+                        '7rem');
   nameElement.textContent = 'Crepes on a Cloud';
   bylineElement.textContent = 'Eatery for Sweet and Savory Crepes';
   [nameElement, bylineElement].forEach(element => headingsElement.appendChild(element));
@@ -26,7 +26,8 @@ function renderCrepeMainImage() {
   renderResponsiveImage(contentElement, 
                         require.context('../images/crepe-main/', false, /\.jpg$/i), 
                         '100vw', 
-                        'Crepe topped with blueberries with small bowl of jam');
+                        'Crepe topped with blueberries with small bowl of jam',
+                        ['crepe-main-img']);
 }
 
 function renderAttribution() {

@@ -8,7 +8,7 @@ export function renderIcon(parentElement, iconName) {
   parentElement.appendChild(img);
 }
 
-export default function renderResponsiveImage(parentElement, imgDistSet, sizes, alt = '') {
+export default function renderResponsiveImage(parentElement, imgDistSet, sizes, alt = '', classNames = []) {
   const img = new Image(),
     imgSrcSet =
       imgDistSet.keys()
@@ -18,5 +18,6 @@ export default function renderResponsiveImage(parentElement, imgDistSet, sizes, 
   img.srcset = imgSrcSet.map(([filename, width]) => `${imgDistSet(filename)} ${width}w`).join(',');
   img.sizes = sizes;
   img.alt = alt;
+  classNames.forEach(className => img.classList.add(className));
   parentElement.appendChild(img);
 }
