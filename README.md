@@ -2,8 +2,6 @@ This project is a sample homepage for a restaurant. It is built using the standa
 
 The project primarily demonstrates use of npm to incorporate external JS modules, as well as use of Webpack to bundle files and add a build phase to front-end web projects.
 
-This project is currently in progress.
-
 Image credits:
 
 1) RitaE: https://pixabay.com/users/ritae-19628/
@@ -61,3 +59,9 @@ https://www.pexels.com/photo/two-sets-of-brown-wooden-table-and-chairs-outside-s
 
 18) Freepik: https://www.flaticon.com/
 https://www.flaticon.com/free-icon/sun_2698213
+
+19) Material Design Icons: https://materialdesignicons.com/
+  a. weather-partly-cloudy
+  b. silverware-fork-knife
+  c. phone
+  d. email-outline
