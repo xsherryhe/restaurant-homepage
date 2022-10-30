@@ -12,7 +12,7 @@ function renderHeadings() {
         nameElement = document.createElement('h1'),
         bylineElement = document.createElement('h2');
   
-  headingsElement.classList.add('home-headings');
+  headingsElement.classList.add('home', 'heading');
   renderResponsiveImage(headingsElement, 
                         require.context('../images/logo/', false, /\.png$/i),
                         '8rem');
@@ -24,9 +24,9 @@ function renderHeadings() {
 
 function renderCrepeMainImage() {
   renderResponsiveImage(contentElement, 
-              require.context('../images/crepe-main/', false, /\.jpg$/i), 
-              '100vw', 
-              'Crepe topped with blueberries with small bowl of jam');
+                        require.context('../images/crepe-main/', false, /\.jpg$/i), 
+                        '100vw', 
+                        'Crepe topped with blueberries with small bowl of jam');
 }
 
 function renderAttribution() {

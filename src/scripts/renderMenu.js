@@ -1,4 +1,5 @@
 import renderContentNone from './renderNone';
+import renderResponsiveImage, { renderIcon } from './renderImage';
 import renderMenuItem from './renderMenuItem';
 import { contentElement } from './cacheDOM';
 
@@ -7,10 +8,16 @@ function setStyleClasses() {
   document.querySelector('.tab.menu').classList.add('current');
 }
 
-function renderMainHeading() {
-  const menuHeadingElement = document.createElement('h1');
-  menuHeadingElement.textContent = 'Menu';
-  contentElement.appendChild(menuHeadingElement);
+function renderHeading() {
+  const headingContainer = document.createElement('div'),
+        headingElement = document.createElement('h1');
+  headingContainer.classList.add('menu', 'heading');
+  renderResponsiveImage(headingContainer,
+                        require.context('../images/logo/', false, /\.png$/i),
+                        '8rem');
+  headingElement.textContent = 'Menu';
+  headingContainer.appendChild(headingElement);
+  contentElement.appendChild(headingContainer);
 }
 
 function renderAppetizers() {
@@ -74,17 +81,31 @@ function renderBeverages() {
 }
 
 function renderSection(headingText, details) {
-  const headingElement = document.createElement('h2'),
+  const sectionElement = document.createElement('div'),
+        headingElement = renderSectionHeading(headingText),
         detailsElement = document.createElement('div');
-  headingElement.textContent = headingText;
+  sectionElement.classList.add('menu-section');
+  detailsElement.classList.add('menu-details');
   details.forEach(details => renderMenuItem(detailsElement, ...details));
-  [headingElement, detailsElement].forEach(element => contentElement.appendChild(element));
+  [headingElement, detailsElement].forEach(element => sectionElement.appendChild(element));
+  contentElement.appendChild(sectionElement);
+}
+
+function renderSectionHeading(headingText) {
+  const headingElement = document.createElement('div'),
+        headingTextElement = document.createElement('h2');
+  headingElement.classList.add('menu-section-heading');
+  renderIcon(headingElement, 'cloud-font');
+  headingTextElement.textContent = headingText;
+  headingElement.appendChild(headingTextElement);
+  renderIcon(headingElement, 'cloud-font');
+  return headingElement;
 }
 
 export default function renderMenu() {
   renderContentNone();
   setStyleClasses();
-  renderMainHeading();
+  renderHeading();
   renderAppetizers();
   renderSavoryCrepes();
   renderSweetCrepes();
