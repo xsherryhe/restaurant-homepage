@@ -15,7 +15,7 @@ function renderHeadings() {
   headingsElement.classList.add('home', 'heading');
   renderResponsiveImage(headingsElement, 
                         require.context('../images/logo/', false, /\.png$/i),
-                        '7rem');
+                        '8rem');
   nameElement.textContent = 'Crepes on a Cloud';
   bylineElement.textContent = 'Eatery for Sweet and Savory Crepes';
   [nameElement, bylineElement].forEach(element => headingsElement.appendChild(element));
