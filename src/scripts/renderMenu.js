@@ -81,17 +81,14 @@ function renderBeverages() {
 }
 
 function renderSection(headingText, details) {
-  const sectionElement = document.createElement('div'),
-        headingElement = renderSectionHeading(headingText),
-        detailsElement = document.createElement('div');
+  const sectionElement = document.createElement('div');
   sectionElement.classList.add('menu-section');
-  detailsElement.classList.add('menu-details');
-  details.forEach(details => renderMenuItem(detailsElement, ...details));
-  [headingElement, detailsElement].forEach(element => sectionElement.appendChild(element));
+  renderSectionHeading(sectionElement, headingText);
+  renderSectionDetails(sectionElement, details);
   contentElement.appendChild(sectionElement);
 }
 
-function renderSectionHeading(headingText) {
+function renderSectionHeading(parentElement, headingText) {
   const headingElement = document.createElement('div'),
         headingTextElement = document.createElement('h2');
   headingElement.classList.add('menu-section-heading');
@@ -99,7 +96,14 @@ function renderSectionHeading(headingText) {
   headingTextElement.textContent = headingText;
   headingElement.appendChild(headingTextElement);
   renderIcon(headingElement, 'cloud-font');
-  return headingElement;
+  parentElement.appendChild(headingElement);
+}
+
+function renderSectionDetails(parentElement, details) {
+  const detailsElement = document.createElement('div');
+  detailsElement.classList.add('menu-details');
+  details.forEach(details => renderMenuItem(detailsElement, ...details));
+  parentElement.appendChild(detailsElement);
 }
 
 export default function renderMenu() {

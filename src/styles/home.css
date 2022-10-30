@@ -44,15 +44,27 @@ body.home {
   align-items: center;
 }
 
+.info .sub-heading {
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.info img {
+  max-width: 2.5rem;
+}
+
+.info h3 {
+  font-family: var(--byline-font);
+  font-size: 1.5rem;
+}
+
 .location {
   padding: 0.5rem 1rem;
   gap: 0.5rem;
   text-align: center;
-}
-
-.location h3, .hours thead {
-  font-family: var(--byline-font);
-  font-size: 1.5rem;
 }
 
 .location h3, .location p {
@@ -116,6 +128,7 @@ body.home {
 @media (max-width: 975px) {
   .info {
     grid-template: repeat(3, max-content) / 1fr;
+    margin: 1.5rem;
   }
 
   .info>* {
@@ -128,8 +141,11 @@ body.home {
     grid-row: 2;
   }
 
-  .hours tbody {
+  .hours table {
     align-self: stretch;
+  }
+
+  .hours tbody {
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     grid-auto-flow: column;
     justify-content: space-between;
@@ -147,7 +163,11 @@ body.home {
   }
 }
 
-@media (max-width: 815px) {
+@media (max-width: 830px) {
+  .info {
+    margin: 1rem;
+  }
+
   .hours tbody {
     grid-template: repeat(4, 1fr) / repeat(2, 1fr);
   }
@@ -163,12 +183,11 @@ body.home {
     font-size: 1.2rem;
   }
 
-  .info {
-    margin: 1rem;
+  .hours table {
+    align-self: center;
   }
 
   .hours tbody {
-    align-self: center;
     grid-template: repeat(7, 1fr) / 1fr;
   }
 

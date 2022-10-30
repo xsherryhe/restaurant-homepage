@@ -1,5 +1,5 @@
 import renderContentNone from './renderNone';
-import renderResponsiveImage from './renderImage';
+import renderResponsiveImage, { renderIcon } from './renderImage';
 import { contentElement } from './cacheDOM';
 
 function setStyleClasses() {
@@ -50,11 +50,9 @@ function renderInfo() {
 }
 
 function renderLocation(parentElement) {
-  const locationElement = document.createElement('div'),
-        headingElement = document.createElement('h3');
+  const locationElement = document.createElement('div');
   locationElement.classList.add('location');
-  headingElement.textContent = 'Our Location';
-  locationElement.appendChild(headingElement);
+  renderSubHeading(locationElement, 'Our Location');
   renderAddress(locationElement);
   parentElement.appendChild(locationElement);
 }
@@ -87,14 +85,11 @@ function renderReviews(parentElement) {
 }
 
 function renderHours(parentElement) {
-  const hoursElement = document.createElement('table');
+  const hoursElement = document.createElement('div'),
+        hoursTableElement = document.createElement('table');
   hoursElement.classList.add('hours');
-  hoursElement.innerHTML = `
-    <thead>
-      <tr>
-        <th colspan="2">Our Hours</th>
-      </tr>
-    </thead>
+  renderSubHeading(hoursElement, 'Our Hours');
+  hoursTableElement.innerHTML = `
     <tbody>
       <tr>
         <th>Monday</th>
@@ -127,7 +122,19 @@ function renderHours(parentElement) {
     </tbody>
   `;
 
+  hoursElement.appendChild(hoursTableElement);
   parentElement.appendChild(hoursElement);
+}
+
+function renderSubHeading(parentElement, headingText) {
+  const headingElement = document.createElement('div'),
+        headingTextElement = document.createElement('h3');
+  
+  headingElement.classList.add('sub-heading');
+  renderIcon(headingElement, 'cloud-font');
+  headingTextElement.textContent = headingText;
+  headingElement.appendChild(headingTextElement);
+  parentElement.appendChild(headingElement);
 }
 
 export default function renderHome() {
