@@ -43,9 +43,30 @@ function renderAttribution() {
 function renderInfo() {
   const infoElement = document.createElement('div');
   infoElement.classList.add('info');
+  renderLocation(infoElement);
   renderHours(infoElement);
   renderReviews(infoElement);
   contentElement.appendChild(infoElement);
+}
+
+function renderLocation(parentElement) {
+  const locationElement = document.createElement('div'),
+        headingElement = document.createElement('h3');
+  locationElement.classList.add('location');
+  headingElement.textContent = 'Our Location';
+  locationElement.appendChild(headingElement);
+  renderAddress(locationElement);
+  parentElement.appendChild(locationElement);
+}
+
+function renderAddress(parentElement) {
+  const addressElement = document.createElement('div');
+  ['123 Cloud Blvd.', 'Sky, Universe 54321'].forEach(addressLineText => {
+    const addressLineElement = document.createElement('p');
+    addressLineElement.textContent = addressLineText;
+    addressElement.appendChild(addressLineElement);
+  })
+  parentElement.appendChild(addressElement);
 }
 
 function renderReviews(parentElement) {
