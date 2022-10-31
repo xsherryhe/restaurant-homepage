@@ -60,8 +60,8 @@ https://www.pexels.com/photo/two-sets-of-brown-wooden-table-and-chairs-outside-s
 18) Freepik: https://www.flaticon.com/
 https://www.flaticon.com/free-icon/sun_2698213
 
-19) Material Design Icons: https://materialdesignicons.com/
-  a. weather-partly-cloudy
-  b. silverware-fork-knife
-  c. phone
+19) Material Design Icons: https://materialdesignicons.com/  
+  a. weather-partly-cloudy  
+  b. silverware-fork-knife  
+  c. phone  
   d. email-outline
